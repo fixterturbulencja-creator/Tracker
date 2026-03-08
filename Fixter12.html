@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixter Tracker</title>
+  <link rel="stylesheet" href="Fixter12.css" />
+  <link rel="icon" href="c:\Users\jkowa\Desktop\bity_z_grala_okladka.jpg" type="image/png">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-title">Fixter Turbulencja Tracker</div>
+  
+    <div class="navbar-buttons">
+      <a href="https://www.tiktok.com/@Fixterturbulencja" class="nav-btn">KONTAKT</a>
+      <a href="https://www.youtube.com/@fixter_label" class="nav-btn">YOUTUBE</a>
+      <a href="https://mugo.lnk.to/BITYZGRALA" class="nav-btn">STREAMINGS</a>
+      <div class="settings-dropdown">
+        <a href="#" class="nav-btn" onclick="toggleSettings()">USTAWIENIA</a>
+        <div id="settings-menu" class="dropdown-content hidden">
+          <a href="#" onclick="toggleTheme()">Zmiana motywu</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="mainSearch" placeholder="Szukaj utworu..." oninput="filterTracks()" />
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <div class="container">
+    <!-- ====================  KARTA 1: DAYS BEFORE BITY Z GRALA [V1] ==================== -->
+    <details class="album-details days">
+      <summary class="album-summary" style="margin-top: 50px;">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Desktop/days.jpg" alt="DAYS BEFORE BITY Z GRALA" class="cover" />
+          <div class="info1">
+            <h1>DAYS BEFORE BITY Z GRALA [V1]</h1>
+            <p>
+              16 Maja 2025 roku wyciekły leaki związane z albumem zatytułowanym:
+              "DAYS BEFORE: BITY Z GRALA". Album miał zawierać piosenki zrobione
+              przed albumem: "BITY Z GRALA". Jako iż wyciekły przecieki dzień
+              przed wydaniem Fixter Turbulencja postanowiła nie wydawać albumu.
+            </p>
+          </div>
+        </div>
+      </summary>
+    
+      <div class="tracklist-container">
+        <!-- Bomba na Gorzów wpasowana jak zwykły track -->
+        <details class="track-with-versions">
+          <summary class="track-item">
+            <div class="track-meta">
+              <div class="track-title">???</div>
+            </div>
+          </summary>
+    
+          <!-- Wersja V1 -->
+          <div class="track-item" data-audio="audio/bomba_na_gorzow_v1.mp3">
+            <button class="play-btn" onclick="playTrack(event, this)">▶</button>
+            <div class="track-meta">
+              <div class="track-title">V1</div>
+            </div>
+            <div class="track-duration">1:12</div>
+          </div>
+    
+          <!-- Wersja V2 -->
+          <div class="track-item" data-audio="audio/bomba_na_gorzow_v2.mp3">
+            <button class="play-btn" onclick="playTrack(event, this)">▶</button>
+            <div class="track-meta">
+              <div class="track-title">V2</div>
+            </div>
+            <div class="track-duration">1:05</div>
+          </div>
+        </details>
+
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Baca (BONUS TRACK).wav">
+          <div class="track-meta">
+            <div class="track-title">BACA
+              <span class="label green">OG File</span>
+            </div> 
+            <div class="track-subinfo">(Bonus Track)</div>
+          </div>
+          <div class="track-duration">2:18</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Bitwa pod Wiedniem Wav.wav">
+          <div class="track-meta">
+            <div class="track-title">Bitwa pod Wiedniem
+              <span class="label green">OG File</span>
+            </div>
+            <div class="track-subinfo">(Bitwa pod Wiedniem Wav)</div>
+          </div>
+          <div class="track-duration">2:11</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Bomba na Gorzów Wav.wav">
+          <div class="track-meta">
+            <div class="track-title">Bomba na Gorzów
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">2:22</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Druty Kolczaste na balkonie REMIX 1.wav">
+          <div class="track-meta">
+            <div class="track-title">Druty Kolczaste na balkonie REMIX [V1]
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">1:20</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Machamba.wav">
+          <div class="track-meta">
+            <div class="track-title">Machamba
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">2:00</div>
+        </div>
+
+      </div>
+    </details>
+
+            <!-- ====================  KARTA 1.2: dbbzg v2 ==================== -->
+    <details class="album-details days2">
+              <summary class="album-summary">
+                <div class="album-box">
+                  <img src="c:\Users\jkowa\Desktop\DAYS_BEFORE_BITY_Z_GRALA_okadka.png" alt="DAYS BEFORE BITY Z GRALA [V2]" class="cover" />
+                  <div class="info11">
+                    <h1>DAYS BEFORE BITY Z GRALA [V2]</h1>
+                    <p>
+            
+                    </p>
+                  </div>
+                </div>
+              </summary>
+              <div class="tracklist-container">
+                <div class="track-item" onclick="playTrack(event, this)"
+                  data-audio="c:\Users\jkowa\Desktop\spotify\asaa\Jak drake demo v1.mp3" style="margin-top: 10px;">
+                  <div class="track-meta">
+                    <div class="track-title">JAK DRAKE [DEMO V1]
+                    </div>
+                  </div>
+                  <div class="track-duration">1:53</div>
+                </div>
+            
+              </div>
+    </details>
+    
+
+    <!-- ====================  KARTA 2: BITY Z GRALA ==================== -->
+    <details class="album-details bity">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="c:\Users\jkowa\Desktop\dfffff.jpg" alt="BITY Z GRALA" class="cover" />
+          <div class="info2">
+            <h1>BITY Z GRALA</h1>
+            <p>
+              Ten album to jebany hołd dla undergroundu, jakim powinien być – surowy, brudny i szczery do bólu. Fixter Turbyulencja
+              odpala tutaj paczkę bitów, które brzmią jakby je wyciągnął prosto z zakurzonej konsoli, rozjebanej stacji roboczej i
+              starego magnetofonu z Grala. To nie są pierdolone popowe instrumentale z YouTube'a – to dźwięk ulicy, piwnicy, dymu i
+              bólu dupy po nocy przy Abletonie.
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Downloads\Chamba1.wav" style="margin-top: 10px;">
+          <div class="track-meta">
+            <div class="track-title">Chamba [DEMO V1]
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">1:17</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Downloads\Wylew.wav">
+          <div class="track-meta">
+            <div class="track-title">Wylew
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">1:03</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Downloads\Żniwa Rytmu.wav">
+          <div class="track-meta">
+            <div class="track-title">Żniwa Rytmu
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">1:51</div>
+        </div>
+
+        <div class="track-divider">
+          For / Pre-Fixter
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\ASAP FrukII - ŚWIECE SIĘ JAK PSU JAJCA.wav" style="margin-top: 10px;">
+          <div class="track-meta">
+            <div class="track-title">ASAP FrukII - ŚWIECE SIE JAK PSU JAJCA
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">3:44</div>
+        </div>
+      
+      </div>
+    </details>
+
+    <!-- ====================  KARTA 3: KATALOG ==================== -->
+    <details class="album-details katalog">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Desktop/katalog.jpg" alt="KATALOG" class="cover">
+          <div class="info3">
+            <h1>KATALOG</h1>
+            <p>
+              KATALOG - tak naprawdę to zastępca albumu: DAYS BEFORE: BITY Z GRALA. Nie ma tu o czym mówić, ale warto dodać, że
+              jeszcze wtedy nie było w planach aby był tu bonus track. Warto też dodać, że wtedy cały squad Fixter Turbulencja
+              nagrywali to w Compton, ponieważ nocowali u wujka Escobar'a. Historia brzmi jak zmyślona, ale wuja był malarzem i
+              naprawdę miał nazwisko Escobar. Ale jaja!
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Kompleksowy System Informatyczny - gruba sprawa.mp3" style="margin-top: 10px;" >
+          <div class="track-meta">
+            <div class="track-title">Kompleksowy System Informatyczny - gruba sprawa
+            </div>
+          </div>
+          <div class="track-duration">2:19</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Wychodzisz na pole_ -nie.wav">
+          <div class="track-meta">
+            <div class="track-title">Wychodzisz na pole?
+              <span class="label green">OG File</span>
+            </div>
+            <div class="track-subinfo">(Wychodzisz na pole_ -nie)</div>
+          </div>
+          <div class="track-duration">3:17</div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- ====================  KARTA 4: CISCO P.T. STUDIO SESSIONS ==================== -->
+    <details class="album-details cisco">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Downloads/CISCO.jpg" alt="CISCO P.T. STUDIO SESSIONS" class="cover" />
+          <div class="info4">
+            <h1>CISCO P.T. STUDIO SESSIONS</h1>
+            <p>
+              Sesje studyjne nad hitem "Cisco Pakiet Tracer", wyszły one na EP 21 maja 2025 r. Projekt ten posiada w sobie pełno
+              inspiracji jak i niesamowitej produkcji.
+              Zawierał on kolaboracje z Adam'em Titanic'iem przy CPT Remastered gdzie znalazł sie oszałamiający beat switch. Podczas prac nad jednym hitem wynikło wiele innych równie
+              majestatycznych tracków jak np. Fortnite Balls.
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+
+        <details class="track-with-versions">
+          <summary class="track-item">
+            <div class="track-meta">
+              <div class="track-title">Biba u Huberta</div>
+            </div>
+          </summary>
+        
+          <!-- Wersja V1 -->
+          <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Biba_u_huberta_demo_v1.wav">
+            <div class="track-meta">
+              <div class="track-title" style="margin-left: 20px;">Biba u Huberta [DEMO V1]
+                <span class="label green">OG File</span></div>
+              <div class="track-subinfo" style="margin-left: 20px;">(prod. AdamTitanic69)</div>
+            </div>
+            <div class="track-duration">2:06</div>
+          </div>
+        
+          <!-- Wersja V2 -->
+          <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Biba_u_huberta_demo_v1\Biba_u_huberta_demo_v2.wav">
+            <div class="track-meta">
+              <div class="track-title" style="margin-left: 20px;">Biba u Huberta [DEMO V2]
+                <span class="label green">OG File</span></div>
+              <div class="track-subinfo" style="margin-left: 20px;">(prod. AdamTitanic69)</div>
+            </div>
+            <div class="track-duration">2:06</div>
+          </div>
+        </details>
+        
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Cisco_Packet_Tracer.mp3">
+          <div class="track-meta">
+            <div class="track-title">Cisco Pakiet Tracer P.1
+            </div>
+            <div class="track-subinfo">(CPT Part.1, Cisco Packet Tracer)</div>
+          </div>
+          <div class="track-duration">1:09</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Cisco Packet Dreaming.mp3">
+          <div class="track-meta">
+            <div class="track-title">Cisco Pakiet Tracer P.2
+            </div>
+            <div class="track-subinfo">(CPT Part.2, Cisco Packet Dreaming)</div>
+          </div>
+          <div class="track-duration">2:27</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\CISCO_remix_v1.wav">
+          <div class="track-meta">
+            <div class="track-title">Cisco Pakiet Tracer [DEMO V2]
+              <span class="label green">OG File</span>
+            </div>
+            <div class="track-subinfo">(Cisco Pakiet Tracer Remastered, Cisco Pakiet Tracer REMIX)</div>
+            <div class="track-subinfo">(prod. AdamTitanic69)</div>
+          </div>
+          <div class="track-duration">2:06</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Fortnite Balls.mp3">
+          <div class="track-meta">
+            <div class="track-title">Fortnite Balls
+              <span class="label lowquality">Low Quality</span>
+            </div>
+          </div>
+          <div class="track-duration">3:00</div>
+        </div>
+      </div>
+    </details>
+
+    <!-- ====================  KARTA 5: GRYLL ==================== -->
+    <details class="album-details gryll">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Desktop/saddd.png" alt="GRYLL" class="cover" />
+          <div class="info5">
+            <h1>GRYLL</h1>
+            <p>
+              Fixter, jak zwykle bez filtra, odpala wersy ostrzejsze niż żyletka z bazaru. Na Gryllu nie ma miejsca na przypadek –
+              każdy bit to kurwa taran, każdy wers to cios prosto między oczy. Od smolistych bangerów, przez paranoiczne tripy, aż po
+              egzystencjalne uderzenia, Turbulencja pokazuje, że jeszcze nie powiedział ostatniego słowa. A może dopiero zaczyna.
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\Fortnite balls - Epic Mashup Edition.mp3" style="margin-top: 10px;">
+          <div class="track-meta">
+            <div class="track-title">Kabanosy
+              <span class="label green">OG File</span>
+            </div>
+          </div>
+          <div class="track-duration">5:54</div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- ====================  KARTA 6: BEATS FROM BALLS ==================== -->
+    <details class="album-details beats">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Desktop/sddff.jpg" alt="BEATS FROM BALLS" class="cover" />
+          <div class="info6">
+            <h1>BEATS FROM BALLS</h1>
+            <p>
+              Powstający kolaboracyjny album Fixtera z gwiazdą jaką jest Phonovan Lurt. Album jest bardzo inspirujący
+              oraz zawiera majestatyczną produkcję. Cały czas trwają prace nad tym arcydziełem, gdy będzie ukończony z pewnością odniesie bardzo duży sukces 
+              oraz bedzię sobą zachęcał wielu miłośników prawdziwej muzyki. Prace nad albumem rozpoczęły się 3 maja 2025.
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Desktop\Sigma rap\snippet_lurt.mp3" style="margin-top: 10px;">
+          <div class="track-meta">
+            <div class="track-title">Phonovan Lurt - Fortnite Balls (Fixter Remix)
+              <span class="label lowquality">Snippet</span>
+            </div>
+          </div>
+          <div class="track-duration">—</div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Desktop\Sigma rap\Fortnite balls - Epic Mashup Edition.mp3">
+          <div class="track-meta">
+            <div class="track-title">Fortnite Balls 2 (ft. Phonovan Lurt)
+              <span class="label lowquality">Partly Very Low Quality</span>
+            </div>
+            <div class="track-subinfo">(Fortnite balls - Epic Mashup Edition)</div>
+            <div class="track-subinfo">(prod. Flopsky)</div>
+          </div>
+          <div class="track-duration">2:38</div>
+        </div>
+
+      </div>
+    </details>
+
+    <!-- ====================  KARTA 7: BITY Z WAŁA ==================== -->
+    <details class="album-details walo">
+      <summary class="album-summary">
+        <div class="album-box">
+          <img src="C:/Users/jkowa/Downloads/GÓWNO.PNG" alt="BITY Z WAŁA" class="cover" />
+          <div class="info7">
+            <h1>BITY Z WAŁA [V1]</h1>
+            <p>
+              1 maja 2025 Fixter Turbulencja zapowiedział swój pierwszy studyjny album „Bity
+              z Wała” –
+              konkretny, brudny materiał,
+              który nie robi łaski. To nie mixtape ani zbiór luźnych numerów, tylko pełnoprawny projekt z duszą
+              podwórka i
+              beatami,
+              które walą jak cegła w ryj. Na dodatek miał to być pierwszy album w którym zawitali by goście spoza Fixter Turbulencji.
+              Mianowicie na tracku: Intro
+              miał być Phonovan Lurt
+            </p>
+          </div>
+        </div>
+      </summary>
+      <div class="tracklist-container">
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Downloads\Buty z mięsa.mp3" style="margin-top: 10px;">
+          <div class="track-meta">
+            <div class="track-title">Buty z mięsa
+            </div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Downloads\Buty z mięsa (1).mp3">
+          <div class="track-meta">
+            <div class="track-title">Buty z mięsa 2
+            </div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Downloads\Diss na Norba.mp3">
+          <div class="track-meta">
+            <div class="track-title">Diss na Norba
+            </div>
+            <div class="track-subinfo">(prod. AdamTitanic69)</div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="cc:\Users\jkowa\Downloads\Gówno Flow.mp3">
+          <div class="track-meta">
+            <div class="track-title">Gówno Flow
+            </div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)" data-audio="c:\Users\jkowa\Downloads\Kanye West.mp3">
+          <div class="track-meta">
+            <div class="track-title">Kanye West
+            </div>
+            <div class="track-subinfo">(prod. AdamTitanic69)</div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+        <div class="track-item" onclick="playTrack(event, this)"
+          data-audio="c:\Users\jkowa\Downloads\Stanley, mój ziom (3).mp3">
+          <div class="track-meta">
+            <div class="track-title">Stanley [DEMO 1]
+            </div>
+            <div class="track-subinfo">(prod. AdamTitanic69)</div>
+          </div>
+          <div class="track-duration"></div>
+        </div>
+
+      </div>
+    </details>
+
+            <!-- ====================  KARTA 8: bzw v2 ==================== -->
+    <details class="album-details zwala2">
+          <summary class="album-summary">
+            <div class="album-box">
+              <img src="c:\Users\jkowa\Desktop\BITY_Z_WAA_cover.jpg" alt="BITY Z WAŁA [V2]" class="cover" />
+              <div class="info13">
+                <h1>BITY Z WAŁA [V2]</h1>
+                <p>
+
+                </p>
+              </div>
+            </div>
+          </summary>
+          <div class="tracklist-container">
+            <div class="track-item" onclick="playTrack(event, this)"
+              data-audio="c:\Users\jkowa\Desktop\spotify\asaa\Jak drake demo v1.mp3" style="margin-top: 10px;">
+              <div class="track-meta">
+                <div class="track-title">JAK DRAKE [DEMO V1]
+                </div>
+              </div>
+              <div class="track-duration">1:53</div>
+            </div>
+        
+          </div>
+    </details>
+
+        <!-- ====================  KARTA 11: KEPLER ==================== -->
+    <details class="album-details kepler">
+          <summary class="album-summary">
+            <div class="album-box">
+              <img src="c:\Users\jkowa\Desktop\Projekt_bez_nazwy_2.png" alt="KEPLER" class="cover" />
+              <div class="info12">
+                <h1>Kepler-452b: The Real Story</h1>
+                <p>
+                    Ten album został wydany bez żadnej zapowiedzi 27 czerwca 2025 roku. Był to przełomowy etap w karierze Fixter
+                    Turbulencji. Album opowiada o historii kosmity który przyleciał z Keplera na ziemię. Jest to solowy album bez żadnych
+                    featów.
+                </p>
+              </div>
+            </div>
+          </summary>
+          <div class="tracklist-container">
+            <div class="track-item" onclick="playTrack(event, this)"
+              data-audio="c:\Users\jkowa\Desktop\spotify\asaa\Jak drake demo v1.mp3" style="margin-top: 10px;">
+              <div class="track-meta">
+                <div class="track-title">JAK DRAKE [DEMO V1]
+                </div>
+              </div>
+              <div class="track-duration">1:53</div>
+            </div>
+        
+          </div>
+    </details>
+
+        <!-- ====================  KARTA 9: JOGO JOGO MELO KOMO ==================== -->
+    <details class="album-details melo">
+          <summary class="album-summary">
+            <div class="album-box">
+              <img src="c:\Users\jkowa\Desktop\sssaas.png" alt="JOGO JOGO MELO KOMO" class="cover" />
+              <div class="info9">
+                <h1>JOGO JOGO MELO KOMO</h1>
+                <p>
+                  To nie album, a mixtape wykonany w profesjonalnym studiu Młodego Czopix'a. Powstał w 2015 roku, nie wiadomo dokładnie
+                  kiedy. Wiadomo tylko o tych 6 kawałkach, które skupiają się na spokojnych brzemieniach. Mozna sądzić że mixtape miał
+                  mieć koncept spokojnego a zarazem eksperymentalnego brzmienia.
+                </p>
+              </div>
+            </div>
+          </summary>
+          <div class="tracklist-container">
+            <div class="track-item" onclick="playTrack(event, this)"
+              data-audio="c:\Users\jkowa\Desktop\spotify\asaa\Jak drake demo v1.mp3" style="margin-top: 10px;">
+              <div class="track-meta">
+                <div class="track-title">JAK DRAKE [DEMO V1]
+                </div>
+              </div>
+              <div class="track-duration">1:53</div>
+            </div>
+        
+          </div>
+    </details>
+
+
+        <!-- ====================  KARTA 10: JAK DRAKE ==================== -->
+    <details class="album-details drake">
+          <summary class="album-summary">
+            <div class="album-box">
+              <img src="c:\Users\jkowa\Desktop\jak drake.png" alt="JAK DRAKE" class="cover" />
+              <div class="info8">
+                <h1>JAK DRAKE</h1>
+                <p>
+                  Nigdy nie dokończony album Fixter Turbulencji. Zapowiedziany 22.07.2025 roku. Miał na nim zagościć Julzzz, Flopsky,
+                  AdamTitanic69. Phonovan Lurt, MikeManik (Kanye East). Według informacji które Fixter zdradził słuchaczom możemy domyślać
+                  się również, że na albumie miał być nawet sam Lazer Dim 700. Niestety do teraz nic nie wiadomo o przyszłości albumu.
+                </p>
+              </div>
+            </div>
+          </summary>
+          <div class="tracklist-container">
+            <div class="track-item" onclick="playTrack(event, this)"
+              data-audio="c:\Users\jkowa\Desktop\spotify\asaa\Jak drake demo v1.mp3" style="margin-top: 10px;">
+              <div class="track-meta">
+                <div class="track-title">JAK DRAKE [DEMO V1]
+                </div>
+              </div>
+              <div class="track-duration">1:53</div>
+            </div>
+        
+          </div>
+    </details>
+
+  </div>
+
+
+  <!-- Ukryty element audio -->
+  <audio id="global-audio" preload="metadata" style="display: none;"></audio>
+
+  <div id="spotify-bar" class="spotify-bar" style="display: none;">
+    <!-- LEWA STRONA: okładka + tytuł -->
+    <div class="bar-left">
+      <img id="bar-art" src="" alt="Cover">
+      <span id="bar-track-title">Tytuł</span>
+    </div>
+
+    <!-- ŚRODEK: play/pause + pasek + czasy -->
+    <div class="bar-center">
+      <div class="play-wrapper">
+        <div class="bar-play-circle" onclick="toggleBarPlay()">
+          <span id="bar-play-icon">▶</span>
+        </div>
+      </div>
+      <div class="time-progress">
+        <span id="current-time">0:00</span>
+        <div class="progress-container" onclick="seek(event)">
+          <div class="progress-bar">
+            <div class="progress-filled"></div>
+            <div class="progress-handle"></div>
+          </div>
+        </div>
+        <span id="duration">0:00</span>
+      </div>
+    </div>
+
+    <!-- PRAWA STRONA: głośność + ✕ -->
+    <div class="bar-right">
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" />
+      <button class="bar-close" onclick="closeBar()">✕</button>
+    </div>
+  </div>
+      
+
+  <footer class="footer">
+    <p>&copy; 2025 ABSCO Company Official, Adam Titanic Release Studio, Fixter Turbulencja. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+  <script src="Fixter12.js"></script>
+</body>
+
+</html>

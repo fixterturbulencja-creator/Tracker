@@ -1,0 +1,1087 @@
+/* ===================== Reset i ogólne ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Tytuł */
+.navbar-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Kontener przycisków po prawej */
+.navbar-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* Style przycisków */
+.nav-btn {
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #666;
+}
+
+/* ===================== SEARCH ===================== */
+.search-container {
+  padding: 15px 20px;
+  background: #181818;
+  border-bottom: 1px solid #333;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 75px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background: #2c2c2c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+
+.search-results {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  right: 20px;
+  background: #222;
+  border-radius: 6px;
+  padding: 10px;
+  display: none;
+}
+
+.search-results .track {
+  padding: 6px;
+  border-bottom: 1px solid #333;
+  color: #ddd;
+}
+
+/* ===================== KONTAINER GŁÓWNY ===================== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* ===================== UKRYWANIE DEFAULT MARKER W <summary> ===================== */
+.album-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.album-details summary::marker {
+  content: none;
+  margin: 0;
+  padding: 0;
+}
+
+.album-details summary {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-indent: 0;
+}
+
+/* ===================== KOLOROWE KARTY ===================== */
+.album-summary {
+  width: 1000px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.album-summary:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+}
+
+.album-summary .album-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  /* Zredukowany padding u góry i na dole */
+  gap: 16px;
+}
+
+.album-box .cover {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 30px rgb(0, 0, 0, 0.9);
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.album-box .info h1 {
+  margin-left: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.album-box .info p {
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+.album-box .info1 h1 {
+  text-transform: uppercase;
+  margin-left: 10px;
+  margin-bottom: 8px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgba(171, 252, 252, 0.8);
+}
+
+.album-box .info1 p {
+  margin-left: 10px;
+  color: rgba(171, 252, 252, 0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.album-box .info2 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgba(189, 247, 255, 0.8);
+}
+
+.album-box .info2 p {
+  margin-left: 10px;
+  color: rgba(189, 247, 255, 0.8);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info3 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(207, 178, 123);
+}
+
+.album-box .info3 p {
+  margin-left: 10px;
+  color: rgb(207, 178, 123);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info4 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(218, 191, 156);
+}
+
+.album-box .info4 p {
+  margin-left: 10px;
+  color: rgb(218, 191, 156);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info5 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(255, 131, 49);
+}
+
+.album-box .info5 p {
+  margin-left: 10px;
+  color: rgb(255, 131, 49);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info6 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(216, 27, 241);
+}
+
+.album-box .info6 p {
+  margin-left: 10px;
+  color: rgb(216, 27, 241);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info7 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(255, 87, 21);
+}
+
+.album-box .info7 p {
+  margin-left: 10px;
+  color: rgb(255, 87, 21);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.album-box .info8 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 730;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
+
+.album-box .info8 p {
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.album-box .info9 h1 {
+  margin-left: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  color: rgb(49, 49, 49);
+}
+
+.album-box .info9 p {
+  margin-left: 10px;
+  color: rgb(49, 49, 49);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.album-box .info10 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(49, 49, 49);
+}
+
+.album-box .info10 p {
+  margin-left: 10px;
+  color: rgb(49, 49, 49);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.album-box .info11 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(236, 236, 236);
+}
+
+.album-box .info11 p {
+  margin-left: 10px;
+  color: rgb(236, 236, 236);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+
+.album-box .info12 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+}
+
+.album-box .info12 p {
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.album-box .info13 h1 {
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(95, 0, 95);
+}
+
+.album-box .info13 p {
+  margin-left: 10px;
+  color: rgb(95, 0, 95);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+}
+
+/* Tło poszczególnych kart */
+.album-details.days .album-summary {
+  background: #005f73;
+}
+
+.album-details.bity .album-summary {
+  background: #1e405c;
+}
+
+.album-details.katalog .album-summary {
+  background: #463316;
+}
+
+.album-details.cisco .album-summary {
+  background: #331700;
+}
+
+.album-details.gryll .album-summary {
+  background: #4d4600cb;
+}
+
+.album-details.beats .album-summary {
+  background: #371f38;
+}
+
+.album-details.walo .album-summary {
+  background: #50155f;
+}
+
+.album-details.drake .album-summary {
+  background: #d3d3d3;
+}
+
+.album-details.melo .album-summary {
+  background: #b9efff;
+}
+
+.album-details.zwala2 .album-summary {
+  background: #1b1b1b;
+}
+
+.album-details.days2 .album-summary {
+  background: #474747;
+}
+
+.album-details.kepler .album-summary {
+  background: #2a5521;
+}
+
+/* ===================== Tracklista ===================== */
+.tracklist-container>h2 {
+  display: none;
+}
+.tracklist-container h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.tracklist-container {
+  background-color: rgba(46, 46, 46, 0.2);
+  border-radius: 6px;
+}
+
+/* ===================== Pojedynczy wiersz UTWORU ===================== */
+.track-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s ease;
+}
+
+.track-item:last-child {
+  border-bottom: none;
+}
+
+.track-item:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+}
+
+
+.track-meta {
+  flex: 1;
+  text-align: left;
+}
+
+.track-title {
+  display: flex;
+  align-items: center;
+  /* wypośrodkuje etykiety w pionie */
+  gap: 8px;
+  /* odstęp między tytułem a każdą etykietą */
+  font-size: 16px;
+  color: #fff;
+}
+.track-duration {
+  font-size: 14px;
+  color: #ccc;
+  margin-left: 12px;
+  min-width: 40px;
+  text-align: right;
+}
+
+.track-with-versions summary .track-title {
+  position: relative;
+  padding-left: 20px;
+}
+
+.track-with-versions summary .track-title::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0fdf75;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+
+.track-with-versions[open] summary .track-title::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.track-with-versions {
+  display: block;
+  margin-top: 12px;
+}
+
+/* Ustawiamy <summary> jako normalny wiersz jak reszta */
+.track-with-versions>summary.track-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #333;
+  transition: background-color 0.2s ease;
+}
+
+.track-with-versions>summary.track-item:hover {
+  background-color: #2a2a2a;
+  cursor: pointer;
+}
+
+/* Ukryj marker i dodaj własną strzałkę */
+.track-with-versions summary::-webkit-details-marker {
+  display: none;
+}
+
+.track-with-versions summary::marker {
+  content: none;
+}
+
+.track-with-versions>summary .track-title {
+  position: relative;
+  padding-left: 18px;
+}
+
+.track-with-versions>summary .track-title::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.track-with-versions[open]>summary .track-title::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* ===================== Pojedynczy wiersz WERSJI (wewnątrz Bomba na Gorzów) ===================== */
+.versions {
+  padding-left: 28px;
+  /* odsunięcie od lewej */
+  background-color: #222;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.version-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
+
+.version-item:last-child {
+  border-bottom: none;
+}
+
+.version-item .play-btn {
+  opacity: 1;
+  /* przycisk ▶ zawsze widoczny w wersjach */
+}
+
+.version-meta {
+  flex: 1;
+}
+
+.version-code {
+  font-size: 16px;
+  color: #fff;
+}
+
+.version-duration {
+  font-size: 14px;
+  color: #ccc;
+  margin-left: 12px;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* ===================== Etkieta „Low Quality” ===================== */
+.label.lowquality {
+  background-color: #e63946;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-left: 8px;
+}
+
+/* ===================== SPOTIFY-BAR DOLNY ===================== */
+#spotify-bar {
+  display: none;
+  background-color: #000;
+  padding: 12px 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  font-family: sans-serif;
+}
+
+.bar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#bar-art {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#bar-track-title {
+  font-size: 15px;
+  color: #fff;
+}
+
+.bar-center {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+.play-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+#bar-play-btn {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#bar-play-btn:hover {
+  background-color: #ccc;
+}
+
+.time-progress {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#current-time,
+#duration {
+  font-size: 12px;
+  color: #aaa;
+  width: 40px;
+  text-align: center;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 4px;
+  background: #444;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.progress-filled {
+  height: 100%;
+  width: 0%;
+  background: #1db954;
+}
+
+.progress-handle {
+  position: absolute;
+  top: -4px;
+  width: 12px;
+  height: 12px;
+  background: #1db954;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  left: 0%;
+  cursor: pointer;
+}
+
+.bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#volume-slider {
+  width: 100px;
+  accent-color: #1db954;
+  cursor: pointer;
+}
+
+.bar-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.bar-play-circle {
+  width: 42px;
+  height: 42px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.bar-play-circle:hover {
+  background-color: #eaeaea;
+  transform: scale(1.05);
+}
+
+#bar-play-icon {
+  color: #1db954;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* ===================== DOLNY FOOTER ===================== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 14px;
+  background: #111;
+  border-top: 1px solid #333;
+  margin-top: 150px;
+
+}
+
+/* ===================== RESPONSYWNOŚĆ ===================== */
+@media (max-width: 600px) {
+  .album-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .album-box .cover {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .bar-cover {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #352a28;
+  border-radius: 5px;
+}
+
+.track-subinfo {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* Styl tooltipsów */
+.track-item[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  white-space: pre-line;
+  position: absolute;
+  background: #222;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+.track-item[data-tooltip] {
+  position: relative;
+}
+
+.label {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.label.green {
+  background: #2a9d8f;
+  color: #fff;
+}
+
+.label.blue {
+  background: #4ea5d9;
+  color: #fff;
+}
+
+.spotify-bar .label {
+  display: none;
+}
+
+.spotify-btn {
+  display: inline-block;
+  background-color: #4e4e4ecc;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-right: 900px;
+}
+
+.spotify-btn:hover {
+  background-color: #5a5a5a;
+}
+
+.track-divider {
+  /* dotychczasowe style… */
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 16px 0 6px 0;
+
+  /* DODAJ: dolną granicę jak w .track-item */
+  border-bottom: 1px solid #333;
+}
+
+/* Dodatkowo, aby tuż pod nagłówkiem powstał pasek: */
+.track-divider+.track-item {
+  /* upewniamy się, że pierwszy .track-item po dividerze też ma ten border-top */
+  border-top: 1px solid #333;
+}
+
+.con-btn {
+  display: inline-block;
+  background-color: #4e4e4ecc;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  margin-left: 800px;
+}
+
+.tracklist-container {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Po otwarciu karty — dynamicznie przez JS */
+.album-details.opening .tracklist-container {
+  opacity: 1;
+}
+
+
+.settings-dropdown {
+  position: relative;
+  margin-top: 8px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  z-index: 1001;
+  display: none;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+/* Ukrywanie i pokazywanie */
+.dropdown-content.hidden {
+  display: none;
+}
+
+.dropdown-content.visible {
+  display: block;
+}
