@@ -1091,13 +1091,14 @@ body {
   display: block;
 }
 
-.track-item.highlight {
-  background-color: #1db954;
-  color: white;
-  transition: background 0.4s;
+.track-item.highlight{
+background: rgba(29,185,84,0.3);
+transform: scale(1.02);
+transition: all 0.3s ease;
 }
 
 .search-results .track:hover {
   background: #333;
   cursor: pointer;
 }
+
