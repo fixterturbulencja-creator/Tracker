@@ -286,53 +286,38 @@ document
 // =====================
 function filterTracks() {
 
-  const input =
-    document
-      .getElementById("mainSearch")
-      .value
-      .toLowerCase();
-
-  const results =
-    document.getElementById("search-results");
+  const input = document.getElementById("mainSearch").value.toLowerCase();
+  const results = document.getElementById("search-results");
 
   results.innerHTML = "";
 
-  if (input.length < 2) {
-
+  if (input.length < 1) {
     results.style.display = "none";
-
     return;
-
   }
 
-  const tracks =
-    document.querySelectorAll(".track-item");
+  const tracks = document.querySelectorAll(".track-item");
 
   tracks.forEach(track => {
 
-    const title =
-      track.innerText.toLowerCase();
+    const title = track.innerText.toLowerCase();
 
     if (title.includes(input)) {
 
-      const result =
-        document.createElement("div");
-
+      const result = document.createElement("div");
       result.className = "track";
-
       result.innerText = track.innerText;
 
       result.onclick = () => {
 
-        const album =
-          track.closest(".album-details");
+        const album = track.closest(".album-details");
 
+        // OTWIERA KARTĘ
         if (!album.open) {
-
           album.open = true;
-
         }
 
+        // SCROLL DO UTWORU
         setTimeout(() => {
 
           track.scrollIntoView({
@@ -340,18 +325,17 @@ function filterTracks() {
             block: "center"
           });
 
+          // PODŚWIETLENIE
           track.classList.add("highlight");
 
           setTimeout(() => {
-
             track.classList.remove("highlight");
+          }, 1000);
 
-          }, 2000);
+        }, 300);
 
-        }, 400);
-
+        // ZAMYKA WYSZUKIWARKĘ
         results.style.display = "none";
-
         document.getElementById("mainSearch").value = "";
 
       };
@@ -363,7 +347,6 @@ function filterTracks() {
   });
 
   results.style.display = "block";
-
 }
 
 window.filterTracks = filterTracks;
