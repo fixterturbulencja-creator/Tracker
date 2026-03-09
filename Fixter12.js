@@ -260,4 +260,60 @@ document.addEventListener('click', function (event) {
     menu.classList.remove('visible');
     menu.classList.add('hidden');
   }
+
+  function filterTracks() {
+  const input = document.getElementById("mainSearch").value.toLowerCase();
+  const results = document.getElementById("search-results");
+  results.innerHTML = "";
+
+  if (input.length < 2) {
+    results.style.display = "none";
+    return;
+  }
+
+  const tracks = document.querySelectorAll(".track-item");
+
+  tracks.forEach(track => {
+    const title = track.innerText.toLowerCase();
+
+    if (title.includes(input)) {
+
+      const result = document.createElement("div");
+      result.className = "track";
+      result.innerText = track.innerText;
+
+      result.onclick = () => {
+
+        const album = track.closest(".album-details");
+
+        if (!album.open) {
+          album.open = true;
+        }
+
+        setTimeout(() => {
+
+          track.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+          track.classList.add("highlight");
+
+          setTimeout(() => {
+            track.classList.remove("highlight");
+          }, 2000);
+
+        }, 300);
+
+        results.style.display = "none";
+        document.getElementById("mainSearch").value = "";
+      };
+
+      results.appendChild(result);
+    }
+
+  });
+
+  results.style.display = "block";
+}
 });
